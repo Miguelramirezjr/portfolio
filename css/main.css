@@ -5,11 +5,30 @@ html {
   box-sizing: inherit; }
 
 html, body {
+  max-width: em(1088);
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
   height: 100%;
   line-height: 1.875rem;
   margin: 0 auto;
   padding: 0; }
+  html::after, body::after {
+    clear: both;
+    content: "";
+    display: table; }
+  @media screen and (max-width: 925px) and (min-width: 769px) {
+    html, body {
+      padding-left: 10px;
+      padding-right: 10px; } }
+  @media screen and (max-width: 768px) and (min-width: 481px) {
+    html, body {
+      padding-left: 10px;
+      padding-right: 10px; } }
+  @media screen and (max-width: 480px) {
+    html, body {
+      padding-left: 10px;
+      padding-right: 10px; } }
 
 h1 {
   font-size: 2.5rem; }
@@ -43,21 +62,13 @@ header {
         position: relative;
         cursor: pointer;
         font-size: 1.125rem; }
-        header .nav ul li:after {
-          content: "";
-          display: block;
-          position: absolute;
-          left: 0;
-          bottom: -0.3125rem;
-          width: 0;
-          height: 0.125rem;
-          background-color: #fa0000;
-          transition: width .3s; }
-        header .nav ul li:hover:after {
-          width: 100%; }
   header .info-tags {
     float: right;
-    margin-right: 90px; }
+    margin-right: 90px;
+    padding-top: 40px; }
+    @media screen and (max-width: 925px) and (min-width: 769px) {
+      header .info-tags {
+        padding-top: 20px; } }
     header .info-tags a {
       margin: 10px;
       color: #fa0000; }
@@ -74,9 +85,13 @@ header {
       clear: both;
       content: "";
       display: table; }
+    @media screen and (max-width: 925px) and (min-width: 769px) {
+      header .main-heading {
+        padding-top: 90px; } }
     header .main-heading h1 {
+      margin-top: 1px;
       font-size: 5em;
-      margin: 0;
+      padding-right: 10px;
       font-family: 'Josefin Sans', sans-serif;
       text-transform: uppercase;
       text-shadow: 1px 1px #fa0000; }
@@ -108,32 +123,31 @@ header {
   font-size: 40px;
   display: block;
   line-height: 66px; }
-
-.menu li a {
-  white-space: nowrap;
-  color: transparent;
-  display: block;
-  text-align: center;
-  text-transform: uppercase;
-  text-shadow: 0px 0px 3px #fff;
-  -moz-transform: scale(0.8);
-  -ms-transform: scale(0.8);
-  -o-transform: scale(0.8);
-  -webkit-transform: scale(0.8);
-  transform: scale(0.8);
-  -webkit-transition: all 0.4s linear;
-  -moz-transition: all 0.4s linear;
-  -o-transition: all 0.4s linear;
-  -ms-transition: all 0.4s linear;
-  transition: all 0.4s linear; }
+  .menu li a {
+    white-space: nowrap;
+    color: transparent;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 3px #fff;
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    transition: all 0.4s linear; }
 
 .menu:hover li a {
   text-shadow: 0px 0px 10px #fff; }
 
 .menu li a:hover {
-  text-shadow: none;
   color: #fff;
   background: #fa0000;
+  border-radius: 20px;
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   -o-transform: scale(1);
@@ -209,11 +223,11 @@ header {
 
 .SkillSetListItem {
   padding: 1px;
-  background: #000000;
   padding: 4px;
   border-radius: 5px;
   margin: 5px;
-  display: block; }
+  display: block;
+  background: #000000; }
 
 .SkillSetListItemName {
   background: #fa0000;
@@ -245,6 +259,9 @@ header {
   font-family: 'Biryani', sans-serif;
   color: #fa0000;
   text-transform: uppercase; }
+  @media screen and (max-width: 925px) and (min-width: 769px) {
+    .work-1 {
+      margin-top: 100px; } }
 
 .personal-project {
   height: 500px; }
@@ -258,6 +275,10 @@ header {
     margin-right: 60px; }
     .personal-project .personal-left:last-child {
       margin-right: 0; }
+    @media screen and (max-width: 925px) and (min-width: 769px) {
+      .personal-project .personal-left {
+        height: 400px;
+        width: 250px; } }
     .personal-project .personal-left h2 {
       color: #fa0000;
       font-size: 30px;
@@ -265,8 +286,15 @@ header {
     .personal-project .personal-left p {
       font-size: 20px;
       padding-left: 60px; }
+      @media screen and (max-width: 925px) and (min-width: 769px) {
+        .personal-project .personal-left p {
+          font-size: 18px;
+          padding: 0; } }
     .personal-project .personal-left a {
       padding-left: 50px; }
+      @media screen and (max-width: 925px) and (min-width: 769px) {
+        .personal-project .personal-left a {
+          padding: 0; } }
     .personal-project .personal-left button {
       font-size: 12px;
       width: 85px;
@@ -287,24 +315,42 @@ header {
       margin-right: 0; }
     .personal-project .img-personal-right img {
       margin: 7.5rem 0 0 3.4375rem; }
+      @media screen and (max-width: 925px) and (min-width: 769px) {
+        .personal-project .img-personal-right img {
+          padding-top: 70px; } }
 
 .blog-project {
   height: 500px;
   background-color: RGBA(240, 240, 240, 1); }
+  @media screen and (max-width: 925px) and (min-width: 769px) {
+    .blog-project {
+      margin-top: 105px;
+      height: 550px; } }
   .blog-project .blog-right {
     font-family: 'Josefin Sans', sans-serif;
-    margin-top: 5.625rem;
+    margin-top: 1.875rem;
     float: right;
     margin-right: 60px; }
+    @media screen and (max-width: 925px) and (min-width: 769px) {
+      .blog-project .blog-right {
+        width: 250px; } }
     .blog-project .blog-right h2 {
       color: #fa0000;
       font-size: 30px; }
     .blog-project .blog-right p {
       font-size: 20px; }
+      @media screen and (max-width: 925px) and (min-width: 769px) {
+        .blog-project .blog-right p {
+          font-size: 18px;
+          padding: 0; } }
     .blog-project .blog-right a {
       float: right;
       padding: 30px;
       margin-top: -60px; }
+      @media screen and (max-width: 925px) and (min-width: 769px) {
+        .blog-project .blog-right a {
+          padding: 0;
+          margin: 2px; } }
     .blog-project .blog-right button {
       font-size: 12px;
       width: 85px;
@@ -316,12 +362,23 @@ header {
       .blog-project .blog-right button:hover {
         color: #2e0000;
         transition: all .2s ease-in; }
+      @media screen and (max-width: 925px) and (min-width: 769px) {
+        .blog-project .blog-right button {
+          padding: 0;
+          margin-top: 60px; } }
   .blog-project .img-blog-left {
     padding-left: 100px;
     padding-top: 80px; }
+    @media screen and (max-width: 925px) and (min-width: 769px) {
+      .blog-project .img-blog-left {
+        margin-left: -70px; } }
 
 .surf-project {
   height: 500px; }
+  @media screen and (max-width: 925px) and (min-width: 769px) {
+    .surf-project {
+      height: 550px;
+      margin-top: 25px; } }
   .surf-project .surf-left {
     font-family: 'Josefin Sans', sans-serif;
     float: left;
@@ -332,6 +389,10 @@ header {
     margin-right: 60px; }
     .surf-project .surf-left:last-child {
       margin-right: 0; }
+    @media screen and (max-width: 925px) and (min-width: 769px) {
+      .surf-project .surf-left {
+        margin-top: -1px;
+        width: 250px; } }
     .surf-project .surf-left h2 {
       color: #fa0000;
       font-size: 30px;
@@ -339,8 +400,15 @@ header {
     .surf-project .surf-left p {
       font-size: 20px;
       padding-left: 60px; }
+      @media screen and (max-width: 925px) and (min-width: 769px) {
+        .surf-project .surf-left p {
+          font-size: 18px;
+          padding: 0; } }
     .surf-project .surf-left a {
       padding-left: 50px; }
+      @media screen and (max-width: 925px) and (min-width: 769px) {
+        .surf-project .surf-left a {
+          padding: 0; } }
     .surf-project .surf-left button {
       font-size: 12px;
       width: 85px;
@@ -361,24 +429,42 @@ header {
     padding-left: 100px; }
     .surf-project .img-surf-right:last-child {
       margin-right: 0; }
+    @media screen and (max-width: 925px) and (min-width: 769px) {
+      .surf-project .img-surf-right {
+        float: right; } }
 
 .powell-project {
   height: 500px;
   background-color: RGBA(240, 240, 240, 1); }
+  @media screen and (max-width: 925px) and (min-width: 769px) {
+    .powell-project {
+      height: 550px; } }
   .powell-project .powell-right {
     font-family: 'Josefin Sans', sans-serif;
     margin-top: 5.625rem;
     float: right;
     margin-right: 60px; }
+    @media screen and (max-width: 925px) and (min-width: 769px) {
+      .powell-project .powell-right {
+        width: 250px;
+        margin-top: 40px;
+        margin-right: 50px; } }
     .powell-project .powell-right h2 {
       color: #fa0000;
       font-size: 30px; }
     .powell-project .powell-right p {
       font-size: 20px; }
+      @media screen and (max-width: 925px) and (min-width: 769px) {
+        .powell-project .powell-right p {
+          font-size: 18px; } }
     .powell-project .powell-right a {
       float: right;
       padding: 30px;
       margin-top: -60px; }
+      @media screen and (max-width: 925px) and (min-width: 769px) {
+        .powell-project .powell-right a {
+          padding: 0;
+          margin: 2px; } }
     .powell-project .powell-right button {
       font-size: 12px;
       width: 85px;
@@ -393,6 +479,9 @@ header {
   .powell-project .img-powell-left {
     padding-left: 100px;
     padding-top: 80px; }
+    @media screen and (max-width: 925px) and (min-width: 769px) {
+      .powell-project .img-powell-left {
+        margin-left: -70px; } }
 
 .swamp-project {
   height: 500px; }
@@ -406,6 +495,10 @@ header {
     margin-right: 60px; }
     .swamp-project .swamp-left:last-child {
       margin-right: 0; }
+    @media screen and (max-width: 925px) and (min-width: 769px) {
+      .swamp-project .swamp-left {
+        margin-top: 25px;
+        width: 250px; } }
     .swamp-project .swamp-left h2 {
       color: #fa0000;
       font-size: 30px;
@@ -413,8 +506,15 @@ header {
     .swamp-project .swamp-left p {
       font-size: 20px;
       padding-left: 60px; }
+      @media screen and (max-width: 925px) and (min-width: 769px) {
+        .swamp-project .swamp-left p {
+          font-size: 18px;
+          padding: 0; } }
     .swamp-project .swamp-left a {
       padding-left: 50px; }
+      @media screen and (max-width: 925px) and (min-width: 769px) {
+        .swamp-project .swamp-left a {
+          padding: 0; } }
     .swamp-project .swamp-left button {
       font-size: 12px;
       width: 85px;
@@ -435,24 +535,42 @@ header {
     padding-left: 100px; }
     .swamp-project .img-swamp-right:last-child {
       margin-right: 0; }
+    @media screen and (max-width: 925px) and (min-width: 769px) {
+      .swamp-project .img-swamp-right {
+        float: right; } }
 
 .sneaker-project {
   height: 500px;
   background-color: RGBA(240, 240, 240, 1); }
+  @media screen and (max-width: 925px) and (min-width: 769px) {
+    .sneaker-project {
+      height: 635px; } }
   .sneaker-project .sneaker-right {
     font-family: 'Josefin Sans', sans-serif;
     margin-top: 5.625rem;
     float: right;
     margin-right: 60px; }
+    @media screen and (max-width: 925px) and (min-width: 769px) {
+      .sneaker-project .sneaker-right {
+        width: 250px;
+        margin-top: 40px;
+        margin-right: 50px; } }
     .sneaker-project .sneaker-right h2 {
       color: #fa0000;
       font-size: 30px; }
     .sneaker-project .sneaker-right p {
       font-size: 20px; }
+      @media screen and (max-width: 925px) and (min-width: 769px) {
+        .sneaker-project .sneaker-right p {
+          font-size: 18px; } }
     .sneaker-project .sneaker-right a {
       float: right;
       padding: 30px;
       margin-top: -30px; }
+      @media screen and (max-width: 925px) and (min-width: 769px) {
+        .sneaker-project .sneaker-right a {
+          padding: 0;
+          margin: 2px; } }
     .sneaker-project .sneaker-right button {
       font-size: 12px;
       width: 85px;
@@ -467,9 +585,12 @@ header {
   .sneaker-project .img-sneaker-left {
     padding-left: 100px;
     padding-top: 80px; }
+    @media screen and (max-width: 925px) and (min-width: 769px) {
+      .sneaker-project .img-sneaker-left {
+        margin-left: -70px; } }
 
 .contact-bkg {
-  background: url("../images/abstract-curves.jpg");
+  background: url("../images/spiral1.jpg");
   background-size: cover;
   height: 100%; }
 
@@ -497,15 +618,28 @@ header {
   margin: 3.75rem 3.75rem 0 3.75rem;
   color: #fa0000; }
   .social:hover {
-    color: #fff; }
+    color: #fff;
+    transition: all .2s ease-in; }
 
 .up-arrow {
   width: 100%;
   height: 90px;
   margin-top: 30px; }
-  .up-arrow .arrow {
+  .up-arrow .footertext {
+    color: #fff;
+    padding-top: 50px;
+    padding-left: 15px;
+    font-family: 'Josefin Sans', sans-serif; }
+  .up-arrow h4 {
+    color: #fa0000;
     float: right;
     margin-right: 60px;
-    color: #fa0000; }
+    font-family: 'Josefin Sans', sans-serif; }
+  .up-arrow .arrow {
+    float: right;
+    margin-right: 20px;
+    color: #fa0000;
+    padding: 0; }
     .up-arrow .arrow:hover {
-      color: #fff; }
+      color: #fff;
+      transition: all .2s ease-in; }

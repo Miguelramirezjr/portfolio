@@ -1,12 +1,41 @@
 @import "../bower_components/neat/app/assets/stylesheets/neat";
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 
+$first-color: rgba(250,0,0,1);
+$second-color: darken(rgba(250,0,0,1), 40%);
+$third-color: #fff;
+$fourth-color: RGBA(240, 240, 240, 1);
+$fifth-color: rgba(0,0,0,0.7);
+$sixth-color: rgba(0,0,0,0.2);
+$seventh-color: #000000;
+
+$small-desktop: new-breakpoint(max-width 1150px min-width 926px 9);
+$large-tablet: new-breakpoint(max-width 925px min-width 769px 9);
+$mobile: new-breakpoint(max-width 768px min-width 481px 4);
+$small-mobile: new-breakpoint(max-width 480px 4);
+
 html, body {
+    @include outer-container;
     width: 100%;
     height: 100%;
     line-height: rem(30px);
     margin: 0 auto;
     padding: 0;
+
+    @include media($large-tablet) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    @include media($mobile) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    @include media($small-mobile) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
 
 h1 {
@@ -24,406 +53,301 @@ li {
 
 a {
     position: relative;
-    // color: $light-color;
     text-decoration: none;
 }
 
 header {
-  @include fill-parent;
-  background:  url('../images/smartphone.jpg');
-  background-size: cover;
-  height: 100%;
-
-  .nav {
     @include fill-parent;
-    font-family: 'Josefin Sans', sans-serif;
-    color: #fff;
+    background:  url('../images/smartphone.jpg');
+    background-size: cover;
+    height: 100%;
 
-    ul {
-      text-align: right;
-      margin-top: 0;
-      padding: rem(35px) rem(30px) 0 0;
+    .nav {
+        @include fill-parent;
+        font-family: 'Josefin Sans', sans-serif;
+        color: $third-color;
 
-      li {
-        margin-right: rem(40px);
-        position: relative;
-        cursor: pointer;
-        font-size: rem(18px);
+        ul {
+            text-align: right;
+            margin-top: 0;
+            padding: rem(35px) rem(30px) 0 0;
 
-        &:after {
-          content: "";
-          display: block;
-          position: absolute;
-          left: 0;
-          bottom: rem(-5px);
-          width: 0;
-          height: rem(2px);
-          background-color: rgba(250,0,0,1);
-          transition: width .3s;
+            li {
+                margin-right: rem(40px);
+                position: relative;
+                cursor: pointer;
+                font-size: rem(18px);
+            }
         }
-
-        &:hover:after {
-          width: 100%;
-        }
-      }
     }
-  }
 
-  .info-tags {
-      float: right;
-      margin-right: 90px;
+    .info-tags {
+        float: right;
+        margin-right: 90px;
+        padding-top: 40px;
 
-      a {
-          margin: 10px;
-          color: rgba(250,0,0,1);
+        @include media($large-tablet) {
+            padding-top: 20px;
+        }
 
-          &:hover {
-            color: #fff;
-            transition: all .2s ease-in;
-          }
-      }
-  }
+        a {
+            margin: 10px;
+            color: $first-color;
 
-  .main-heading {
+            &:hover {
+                color: $third-color;
+                transition: all .2s ease-in;
+            }
+        }
+    }
+
+    .main-heading {
     @include outer-container;
     text-align: center;
     padding-top: rem(160px);
 
-    h1 {
-      font-size: 5em;
-      margin: 0;
-      font-family: 'Josefin Sans', sans-serif;
-      text-transform: uppercase;
-      text-shadow: 1px 1px rgba(250,0,0,1);
+        @include media($large-tablet) {
+            padding-top: 90px;
+        }
 
+        h1 {
+            margin-top: 1px;
+            font-size: 5em;
+            padding-right: 10px;
+            font-family: 'Josefin Sans', sans-serif;
+            text-transform: uppercase;
+            text-shadow: 1px 1px $first-color;
+
+        }
+
+        h2 {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 2rem;
+
+        }
     }
-
-    h2 {
-        font-family: 'Josefin Sans', sans-serif;
-        font-size: 2rem;
-        // margin: 0;
-        // margin-top: 25px;
-    }
-
-    // .social-header {
-    //   color: $light-color;
-    //   margin: rem(10px) rem(20px) 0 rem(20px);
-    //
-    //   &:hover {
-    //     color: #fff;
-    //     transition: all .2s ease-in;
-    //   }
-    // }
-  }
 }
 
-.menu{
-	padding: 50px 0px;
-	margin: 0 auto;
-	position: relative;
-	background: rgba(0,0,0,0.7);
-	width: 300px;
-	height: 300px;
-	-webkit-border-radius: 250px;
-	-moz-border-radius: 250px;
-	border-radius: 250px;
-	-webkit-transition: background-color 0.5s ease-in-out;
-	-moz-transition: background-color 0.5s ease-in-out;
-	-o-transition: background-color 0.5s ease-in-out;
-	-ms-transition: background-color 0.5s ease-in-out;
-	transition: background-color 0.5s ease-in-out;
+.menu {
+    padding: 50px 0px;
+    margin: 0 auto;
+    position: relative;
+    background: $fifth-color;
+    width: 300px;
+    height: 300px;
+    -webkit-border-radius: 250px;
+    -moz-border-radius: 250px;
+    border-radius: 250px;
+    -webkit-transition: background-color 0.5s ease-in-out;
+    -moz-transition: background-color 0.5s ease-in-out;
+    -o-transition: background-color 0.5s ease-in-out;
+    -ms-transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
     font-family: 'Josefin Sans', sans-serif;
 }
 
-.menu:hover{
-	background: rgba(0,0,0,0.2);
+.menu:hover {
+    background: $sixth-color;
 }
 
-.menu li{
-	font-size: 40px;
-	display: block;
-	line-height: 66px;
+.menu li {
+    font-size: 40px;
+    display: block;
+    line-height: 66px;
+
+    a {
+        white-space: nowrap;
+        color: transparent;
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        text-shadow: 0px 0px 3px $third-color;
+        -moz-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        -o-transform: scale(0.8);
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+        -webkit-transition: all 0.4s linear;
+        -moz-transition: all 0.4s linear;
+        -o-transition: all 0.4s linear;
+        -ms-transition: all 0.4s linear;
+        transition: all 0.4s linear;
+    }
 }
 
-.menu li a{
-	white-space: nowrap;
-	color: transparent;
-	display: block;
-	text-align: center;
-	text-transform: uppercase;
-	text-shadow: 0px 0px 3px #fff;
-	// letter-spacing: 1px;
-	-moz-transform: scale(0.8);
-	-ms-transform: scale(0.8);
-	-o-transform: scale(0.8);
-	-webkit-transform: scale(0.8);
-	transform: scale(0.8);
-	-webkit-transition: all 0.4s linear;
-	-moz-transition: all 0.4s linear;
-	-o-transition: all 0.4s linear;
-	-ms-transition: all 0.4s linear;
-	transition: all 0.4s linear;
+.menu:hover li a {
+    text-shadow: 0px 0px 10px $third-color;
 }
 
-.menu:hover li a{
-	text-shadow: 0px 0px 10px #fff;
-}
-.menu li a:hover{
-	text-shadow: none;
-	color: #fff;
-	background: rgba(250,0,0,1);
-	-moz-transform: scale(1);
-	-ms-transform: scale(1);
-	-o-transform: scale(1);
-	-webkit-transform: scale(1);
-	transform: scale(1);
+.menu li a:hover {
+    color: $third-color;
+    background: $first-color;
+    border-radius: 20px;
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
 }
 
 .about {
-  @include outer-container;
-  padding: rem(80px) 0;
-  text-align: center;
+    @include outer-container;
+    padding: rem(80px) 0;
+    text-align: center;
 
 
-  h1 {
-    margin: 0 0 rem(20px) 0;
-    font-family: 'Biryani', sans-serif;
-    color: rgba(250,0,0,1);
-  }
+    h1 {
+        margin: 0 0 rem(20px) 0;
+        font-family: 'Biryani', sans-serif;
+        color: $first-color;
+    }
 
-  p {
-    padding-left: 100px;
-    padding-right: 100px;
-    font-size: 22px;
-    font-family: 'Josefin Sans', sans-serif;
-    @include span-columns(10);
-  }
+    p {
+        padding-left: 100px;
+        padding-right: 100px;
+        font-size: 22px;
+        font-family: 'Josefin Sans', sans-serif;
+        @include span-columns(10);
+    }
 
-  a {
-    color: rgba(250,0,0,1);
+    a {
+        color: $first-color;
 
     &:hover {
-      color: darken(rgba(250,0,0,1), 20%);
+        color: darken(rgba(250,0,0,1), 20%);
+        }
     }
-  }
 }
 
 
 .SkillSetContainer {
-  width: 100%;
-  margin: 0 auto;
-  padding: 60px 0 60px 0;
-  @include clearfix;
-  font-family: 'Josefin Sans', sans-serif;
-  background-color: RGBA(240, 240, 240, 1);
-
-  // @include media($large-tablet) {
-  //   width: 100%;
-  //   text-align: center;
-  // }
-  //
-  // @include media($mobile) {
-  //   width: 100%;
-  //   text-align: center;
-  // }
-  //
-  // @include media($small-mobile) {
-  //   width: 100%;
-  //   text-align: center;
-  // }
+    width: 100%;
+    margin: 0 auto;
+    padding: 60px 0 60px 0;
+    @include clearfix;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: $fourth-color;
 }
 
 .SkillSetContainerLeft {
-  width: 49%;
-  display: inline-block;
-  float: left;
-  box-sizing: border-box;
-  padding-left: 5%;
-  font-size: 20px;
-
-  // @include media($large-tablet) {
-  //   width: 100%;
-  //   text-align: center;
-  //   padding-right: 5%;
-  // }
-  //
-  // @include media($mobile) {
-  //   width: 100%;
-  //   padding-right: 5%;
-  //   text-align: center;
-  // }
-  //
-  // @include media($small-mobile) {
-  //   width: 100%;
-  //   padding-right: 5%;
-  //   text-align: center;
-  // }
+    width: 49%;
+    display: inline-block;
+    float: left;
+    box-sizing: border-box;
+    padding-left: 5%;
+    font-size: 20px;
 }
 
 .SkillSetContainerLeftHeading {
-  font-weight: lighter;
-  font-size: 2.5rem;
-  color: rgba(250,0,0,1);
+    font-weight: lighter;
+    font-size: 2.5rem;
+    color: $first-color;
 }
 
 .SkillSetContainerRight {
-  width: 49%;
-  display: inline-block;
-  float: right;
-  box-sizing: border-box;
-  padding-right: 5%;
-  margin-top: 40px;
-
-  // @include media($large-tablet) {
-  //   width: 100%;
-  //   text-align: center;
-  //   margin-top: 20px;
-  //   padding-left: 5%;
-  // }
-  //
-  // @include media($mobile) {
-  //   width: 100%;
-  //   text-align: center;
-  //   margin-top: 20px;
-  //   padding-left: 5%;
-  // }
-  //
-  // @include media($small-mobile) {
-  //   width: 100%;
-  //   text-align: center;
-  //   margin-top: 20px;
-  //   padding-left: 5%;
-  // }
+    width: 49%;
+    display: inline-block;
+    float: right;
+    box-sizing: border-box;
+    padding-right: 5%;
+    margin-top: 40px;
 }
 
 .SkillSetList {
-  list-style: none;
-  margin: 0;
-  padding-left: 60px;
+    list-style: none;
+    margin: 0;
+    padding-left: 60px;
 }
 
 .SkillSetListItem {
-  padding: 1px;
-  background: #000000;
-  padding: 4px;
-  border-radius: 5px;
-  margin: 5px;
-  display: block;
+    padding: 1px;
+    padding: 4px;
+    border-radius: 5px;
+    margin: 5px;
+    display: block;
+    background: $seventh-color;
 }
 
 .SkillSetListItemName {
-  background: rgba(250,0,0,1);
-  color: #fff;
-  padding: 2px 10px;
-  border-radius: 5px;
+    background: $first-color;
+    color: $third-color;
+    padding: 2px 10px;
+    border-radius: 5px;
 
 }
 
 .html {
-  width: 90%;
+    width: 90%;
 }
 
 .javascript {
-  width: 60%;
+    width: 60%;
 }
 
 .jquery {
-  width: 50%;
+    width: 50%;
 }
 
 .underscore {
-  width: 40%;
+    width: 40%;
 }
 
 .git {
-  width: 80%;
+    width: 80%;
 }
 
 .bourbon {
-  width: 70%;
+    width: 70%;
 }
 
 .work-1 {
-  margin: rem(130px) 0 rem(20px) 0;
-  text-align: center;
-  font-family: 'Biryani', sans-serif;
-  color: rgba(250,0,0,1);
-  text-transform: uppercase;
+    margin: rem(130px) 0 rem(20px) 0;
+    text-align: center;
+    font-family: 'Biryani', sans-serif;
+    color: $first-color;
+    text-transform: uppercase;
+
+    @include media($large-tablet) {
+        margin-top: 100px;
+    }
 }
 
 .personal-project {
-  height: 500px;
-
-  .personal-left {
-    font-family: 'Josefin Sans', sans-serif;
-    @include span-columns(6);
-    margin-top: rem(130px);
-    margin-right: 60px;
-
-    h2 {
-        color: rgba(250,0,0,1);
-        font-size: 30px;
-        padding-left: 60px;
-    }
-
-    p {
-        font-size: 20px;
-        padding-left: 60px;
-    }
-
-    a {
-        padding-left: 50px;
-    }
-
-    button {
-        font-size: 12px;
-        width: 85px;
-        height: 30px;
-        border-radius: 15px;
-        background-color: rgba(250,0,0,1);
-        color: #fff;
-        cursor: pointer;
-
-      &:hover {
-        color: darken(rgba(250,0,0,1), 40%);
-        transition: all .2s ease-in;
-      }
-    }
-  }
-
-  .img-personal-right {
-    @include span-columns(6);
-
-    img {
-      margin: rem(120px) 0 0 rem(55px);
-    }
-  }
-}
-
-.blog-project {
     height: 500px;
-    background-color: RGBA(240, 240, 240, 1);
 
-    .blog-right {
+    .personal-left {
         font-family: 'Josefin Sans', sans-serif;
-        // @include span-columns(6);
-        margin-top: rem(90px);
-        float: right;
+        @include span-columns(6);
+        margin-top: rem(130px);
         margin-right: 60px;
 
+        @include media($large-tablet) {
+            height: 400px;
+            width: 250px;
+        }
+
         h2 {
-            color: rgba(250,0,0,1);
+            color: $first-color;
             font-size: 30px;
+            padding-left: 60px;
         }
 
         p {
             font-size: 20px;
+            padding-left: 60px;
+
+            @include media($large-tablet) {
+                font-size: 18px;
+                padding: 0;
+            }
         }
 
         a {
-            float: right;
-            padding: 30px;
-            margin-top: -60px;
+            padding-left: 50px;
+
+            @include media($large-tablet) {
+                padding: 0;
+            }
         }
 
         button {
@@ -431,99 +355,218 @@ header {
             width: 85px;
             height: 30px;
             border-radius: 15px;
-            background-color: rgba(250,0,0,1);
-            color: #fff;
+            background-color: $first-color;
+            color: $third-color;
             cursor: pointer;
 
-          &:hover {
-            color: darken(rgba(250,0,0,1), 40%);
-            transition: all .2s ease-in;
-          }
+            &:hover {
+                color: $second-color;
+                transition: all .2s ease-in;
+            }
+        }
+    }
+
+    .img-personal-right {
+        @include span-columns(6);
+
+        img {
+            margin: rem(120px) 0 0 rem(55px);
+
+            @include media($large-tablet) {
+                padding-top: 70px;
+            }
+        }
+    }
+}
+
+.blog-project {
+    height: 500px;
+    background-color: $fourth-color;
+
+    @include media($large-tablet) {
+        margin-top: 105px;
+        height: 550px;
+    }
+
+    .blog-right {
+        font-family: 'Josefin Sans', sans-serif;
+        margin-top: rem(30px);
+        float: right;
+        margin-right: 60px;
+
+        @include media($large-tablet) {
+            width: 250px;
+        }
+
+        h2 {
+            color: $first-color;
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 20px;
+
+            @include media($large-tablet) {
+                font-size: 18px;
+                padding: 0;
+            }
+        }
+
+        a {
+            float: right;
+            padding: 30px;
+            margin-top: -60px;
+
+            @include media($large-tablet) {
+                padding: 0;
+                margin: 2px;
+            }
+        }
+
+        button {
+            font-size: 12px;
+            width: 85px;
+            height: 30px;
+            border-radius: 15px;
+            background-color: $first-color;
+            color: $third-color;
+            cursor: pointer;
+
+            &:hover {
+                color: $second-color;
+                transition: all .2s ease-in;
+            }
+
+            @include media($large-tablet) {
+                padding: 0;
+                margin-top: 60px;
+            }
         }
     }
 
     .img-blog-left {
         padding-left: 100px;
         padding-top: 80px;
-        // display: inline-block;
-    //   @include span-columns(6);
+
+        @include media($large-tablet) {
+            margin-left: -70px;
+        }
     }
 
 }
 
 .surf-project {
-  // background-color: #fff;
-  height: 500px;
+    height: 500px;
 
-  .surf-left {
-    font-family: 'Josefin Sans', sans-serif;
-    @include span-columns(6);
-    margin-top: rem(130px);
-    margin-right: 60px;
-
-    h2 {
-        color: rgba(250,0,0,1);
-        font-size: 30px;
-        padding-left: 60px;
+    @include media($large-tablet) {
+        height: 550px;
+        margin-top: 25px;
     }
 
-    p {
-        font-size: 20px;
-        padding-left: 60px;
+    .surf-left {
+        font-family: 'Josefin Sans', sans-serif;
+        @include span-columns(6);
+        margin-top: rem(130px);
+        margin-right: 60px;
+
+        @include media($large-tablet) {
+            margin-top: -1px;
+            width: 250px;
+        }
+
+        h2 {
+            color: $first-color;
+            font-size: 30px;
+            padding-left: 60px;
+        }
+
+        p {
+            font-size: 20px;
+            padding-left: 60px;
+
+            @include media($large-tablet) {
+                font-size: 18px;
+                padding: 0;
+            }
+        }
+
+        a {
+            padding-left: 50px;
+
+            @include media($large-tablet) {
+                padding: 0;
+            }
+        }
+
+        button {
+            font-size: 12px;
+            width: 85px;
+            height: 30px;
+            border-radius: 15px;
+            background-color: $first-color;
+            color: $third-color;
+            cursor: pointer;
+
+            &:hover {
+                color: $second-color;
+                transition: all .2s ease-in;
+            }
+        }
     }
 
-    a {
-        padding-left: 50px;
+    .img-surf-right {
+        @include span-columns(6);
+        padding-top: 80px;
+        padding-left: 100px;
+
+        @include media($large-tablet) {
+            float: right;
+        }
     }
-
-    button {
-        font-size: 12px;
-        width: 85px;
-        height: 30px;
-        border-radius: 15px;
-        background-color: rgba(250,0,0,1);
-        color: #fff;
-        cursor: pointer;
-
-      &:hover {
-        color: darken(rgba(250,0,0,1), 40%);
-        transition: all .2s ease-in;
-      }
-    }
-  }
-
-  .img-surf-right {
-    @include span-columns(6);
-
-    padding-top: 80px;
-    padding-left: 100px;
-  }
 }
 
 .powell-project {
     height: 500px;
-    background-color: RGBA(240, 240, 240, 1);
+    background-color: $fourth-color;
+
+    @include media($large-tablet) {
+        height: 550px;
+    }
 
     .powell-right {
         font-family: 'Josefin Sans', sans-serif;
-        // @include span-columns(6);
         margin-top: rem(90px);
         float: right;
         margin-right: 60px;
 
+        @include media($large-tablet) {
+            width: 250px;
+            margin-top: 40px;
+            margin-right: 50px;
+        }
+
         h2 {
-            color: rgba(250,0,0,1);
+            color: $first-color;
             font-size: 30px;
         }
 
         p {
             font-size: 20px;
+
+            @include media($large-tablet) {
+                font-size: 18px;
+            }
         }
 
         a {
             float: right;
             padding: 30px;
             margin-top: -60px;
+
+            @include media($large-tablet) {
+                padding: 0;
+                margin: 2px;
+            }
         }
 
         button {
@@ -531,99 +574,68 @@ header {
             width: 85px;
             height: 30px;
             border-radius: 15px;
-            background-color: rgba(250,0,0,1);
-            color: #fff;
+            background-color: $first-color;
+            color: $third-color;
             cursor: pointer;
 
           &:hover {
-            color: darken(rgba(250,0,0,1), 40%);
-            transition: all .2s ease-in;
-          }
+                color: $second-color;
+                transition: all .2s ease-in;
+            }
         }
     }
 
     .img-powell-left {
         padding-left: 100px;
         padding-top: 80px;
-        // display: inline-block;
-    //   @include span-columns(6);
+
+        @include media($large-tablet) {
+            margin-left: -70px;
+        }
     }
 
 }
 
 .swamp-project {
-  // background-color: #fff;
-  height: 500px;
-
-  .swamp-left {
-    font-family: 'Josefin Sans', sans-serif;
-    @include span-columns(6);
-    margin-top: rem(130px);
-    margin-right: 60px;
-
-    h2 {
-        color: rgba(250,0,0,1);
-        font-size: 30px;
-        padding-left: 60px;
-    }
-
-    p {
-        font-size: 20px;
-        padding-left: 60px;
-    }
-
-    a {
-        padding-left: 50px;
-    }
-
-    button {
-        font-size: 12px;
-        width: 85px;
-        height: 30px;
-        border-radius: 15px;
-        background-color: rgba(250,0,0,1);
-        color: #fff;
-        cursor: pointer;
-
-      &:hover {
-        color: darken(rgba(250,0,0,1), 40%);
-        transition: all .2s ease-in;
-      }
-    }
-  }
-
-  .img-swamp-right {
-    @include span-columns(6);
-    padding-top: 80px;
-    padding-left: 100px;
-
-  }
-}
-
-.sneaker-project {
     height: 500px;
-    background-color: RGBA(240, 240, 240, 1);
 
-    .sneaker-right {
+    @include media($large-tablet) {
+
+    }
+
+    .swamp-left {
         font-family: 'Josefin Sans', sans-serif;
-        // @include span-columns(6);
-        margin-top: rem(90px);
-        float: right;
+        @include span-columns(6);
+        margin-top: rem(130px);
         margin-right: 60px;
 
+        @include media($large-tablet) {
+            margin-top: 25px;
+            width: 250px;
+        }
+
         h2 {
-            color: rgba(250,0,0,1);
+            color: $first-color;
             font-size: 30px;
+            padding-left: 60px;
         }
 
         p {
             font-size: 20px;
+            padding-left: 60px;
+
+            @include media($large-tablet) {
+                font-size: 18px;
+                padding: 0;
+            }
         }
 
         a {
-            float: right;
-            padding: 30px;
-            margin-top: -30px;
+            padding-left: 50px;
+
+            @include media($large-tablet) {
+                padding: 0;
+            }
         }
 
         button {
@@ -631,73 +643,162 @@ header {
             width: 85px;
             height: 30px;
             border-radius: 15px;
-            background-color: rgba(250,0,0,1);
-            color: #fff;
+            background-color: $first-color;
+            color: $third-color;
             cursor: pointer;
 
-          &:hover {
-            color: darken(rgba(250,0,0,1), 40%);
-            transition: all .2s ease-in;
-          }
+            &:hover {
+                color: $second-color;
+                transition: all .2s ease-in;
+            }
+        }
+    }
+
+    .img-swamp-right {
+        @include span-columns(6);
+        padding-top: 80px;
+        padding-left: 100px;
+
+        @include media($large-tablet) {
+            float: right;
+        }
+    }
+}
+
+.sneaker-project {
+    height: 500px;
+    background-color: $fourth-color;
+
+    @include media($large-tablet) {
+        height: 635px;
+    }
+
+    .sneaker-right {
+        font-family: 'Josefin Sans', sans-serif;
+        margin-top: rem(90px);
+        float: right;
+        margin-right: 60px;
+
+        @include media($large-tablet) {
+            width: 250px;
+            margin-top: 40px;
+            margin-right: 50px;
+        }
+
+        h2 {
+            color: $first-color;
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 20px;
+
+            @include media($large-tablet) {
+                font-size: 18px;
+            }
+        }
+
+        a {
+            float: right;
+            padding: 30px;
+            margin-top: -30px;
+
+            @include media($large-tablet) {
+                padding: 0;
+                margin: 2px;
+            }
+        }
+
+        button {
+            font-size: 12px;
+            width: 85px;
+            height: 30px;
+            border-radius: 15px;
+            background-color: $first-color;
+            color: $third-color;
+            cursor: pointer;
+
+            &:hover {
+                color: $second-color;
+                transition: all .2s ease-in;
+            }
         }
     }
 
     .img-sneaker-left {
         padding-left: 100px;
         padding-top: 80px;
-        // display: inline-block;
-    //   @include span-columns(6);
+
+        @include media($large-tablet) {
+            margin-left: -70px;
+        }
     }
 
 }
 
 .contact-bkg {
-    background:  url('../images/abstract-curves.jpg');
+    background:  url('../images/spiral1.jpg');
     background-size: cover;
     height: 100%;
 }
 
 .contact {
-  @include outer-container;
-  padding-top: rem(80px);
-  text-align: center;
-  // color: $light-color;
+    @include outer-container;
+    padding-top: rem(80px);
+    text-align: center;
 
-  h1 {
-    margin: 0 0 25px 0;
-    color: #fff;
-    font-family: 'Biryani', sans-serif;
-    text-transform: uppercase;
-    text-shadow: 2px 2px rgba(250,0,0,1);
-  }
+    h1 {
+        margin: 0 0 25px 0;
+        color: $third-color;
+        font-family: 'Biryani', sans-serif;
+        text-transform: uppercase;
+        text-shadow: 2px 2px $first-color;
+    }
 
-  .contact-social {
-    display: inline-block;
-    margin: 0 5px;
-  }
+    .contact-social {
+        display: inline-block;
+        margin: 0 5px;
+    }
 }
 
 .social {
-  margin: rem(60px) rem(60px) 0 rem(60px);
-  color: rgba(250,0,0,1);
+    margin: rem(60px) rem(60px) 0 rem(60px);
+    color: $first-color;
 
-  &:hover {
-    color: #fff;
-  }
+    &:hover {
+        color: $third-color;
+        transition: all .2s ease-in;
+    }
 }
 
 .up-arrow {
-  width: 100%;
-  height: 90px;
-  margin-top: 30px;
+    width: 100%;
+    height: 90px;
+    margin-top: 30px;
 
-  .arrow {
-    float: right;
-    margin-right: 60px;
-    color: rgba(250,0,0,1);
-
-    &:hover {
-      color: #fff;
+    .footertext {
+        color: $third-color;
+        padding-top: 50px;
+        padding-left: 15px;
+        font-family: 'Josefin Sans', sans-serif;
     }
-  }
+
+    h4 {
+        color: $first-color;
+        float: right;
+        margin-right: 60px;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .arrow {
+        float: right;
+        margin-right: 20px;
+        color: $first-color;
+        padding: 0;
+
+        &:hover {
+            color: $third-color;
+            transition: all .2s ease-in;
+        }
+    }
 }
