@@ -27,7 +27,7 @@ a {
 
 header {
   width: 100%;
-  background: url("../images/pexels-photo.jpg");
+  background: url("../images/smartphone.jpg");
   background-size: cover;
   height: 100%; }
   header .nav {
@@ -238,3 +238,274 @@ header {
 
 .bourbon {
   width: 70%; }
+
+.work-1 {
+  margin: 8.125rem 0 1.25rem 0;
+  text-align: center;
+  font-family: 'Biryani', sans-serif;
+  color: #fa0000;
+  text-transform: uppercase; }
+
+.personal-project {
+  height: 500px; }
+  .personal-project .personal-left {
+    font-family: 'Josefin Sans', sans-serif;
+    float: left;
+    display: block;
+    margin-right: flex-gutter(12);
+    width: flex-grid(6, 12);
+    margin-top: 8.125rem;
+    margin-right: 60px; }
+    .personal-project .personal-left:last-child {
+      margin-right: 0; }
+    .personal-project .personal-left h2 {
+      color: #fa0000;
+      font-size: 30px;
+      padding-left: 60px; }
+    .personal-project .personal-left p {
+      font-size: 20px;
+      padding-left: 60px; }
+    .personal-project .personal-left a {
+      padding-left: 50px; }
+    .personal-project .personal-left button {
+      font-size: 12px;
+      width: 85px;
+      height: 30px;
+      border-radius: 15px;
+      background-color: #fa0000;
+      color: #fff;
+      cursor: pointer; }
+      .personal-project .personal-left button:hover {
+        color: #2e0000;
+        transition: all .2s ease-in; }
+  .personal-project .img-personal-right {
+    float: left;
+    display: block;
+    margin-right: flex-gutter(12);
+    width: flex-grid(6, 12); }
+    .personal-project .img-personal-right:last-child {
+      margin-right: 0; }
+    .personal-project .img-personal-right img {
+      margin: 7.5rem 0 0 3.4375rem; }
+
+.blog-project {
+  height: 500px;
+  background-color: RGBA(240, 240, 240, 1); }
+  .blog-project .blog-right {
+    font-family: 'Josefin Sans', sans-serif;
+    margin-top: 5.625rem;
+    float: right;
+    margin-right: 60px; }
+    .blog-project .blog-right h2 {
+      color: #fa0000;
+      font-size: 30px; }
+    .blog-project .blog-right p {
+      font-size: 20px; }
+    .blog-project .blog-right a {
+      float: right;
+      padding: 30px;
+      margin-top: -60px; }
+    .blog-project .blog-right button {
+      font-size: 12px;
+      width: 85px;
+      height: 30px;
+      border-radius: 15px;
+      background-color: #fa0000;
+      color: #fff;
+      cursor: pointer; }
+      .blog-project .blog-right button:hover {
+        color: #2e0000;
+        transition: all .2s ease-in; }
+  .blog-project .img-blog-left {
+    padding-left: 100px;
+    padding-top: 80px; }
+
+.surf-project {
+  height: 500px; }
+  .surf-project .surf-left {
+    font-family: 'Josefin Sans', sans-serif;
+    float: left;
+    display: block;
+    margin-right: flex-gutter(12);
+    width: flex-grid(6, 12);
+    margin-top: 8.125rem;
+    margin-right: 60px; }
+    .surf-project .surf-left:last-child {
+      margin-right: 0; }
+    .surf-project .surf-left h2 {
+      color: #fa0000;
+      font-size: 30px;
+      padding-left: 60px; }
+    .surf-project .surf-left p {
+      font-size: 20px;
+      padding-left: 60px; }
+    .surf-project .surf-left a {
+      padding-left: 50px; }
+    .surf-project .surf-left button {
+      font-size: 12px;
+      width: 85px;
+      height: 30px;
+      border-radius: 15px;
+      background-color: #fa0000;
+      color: #fff;
+      cursor: pointer; }
+      .surf-project .surf-left button:hover {
+        color: #2e0000;
+        transition: all .2s ease-in; }
+  .surf-project .img-surf-right {
+    float: left;
+    display: block;
+    margin-right: flex-gutter(12);
+    width: flex-grid(6, 12);
+    padding-top: 80px;
+    padding-left: 100px; }
+    .surf-project .img-surf-right:last-child {
+      margin-right: 0; }
+
+.powell-project {
+  height: 500px;
+  background-color: RGBA(240, 240, 240, 1); }
+  .powell-project .powell-right {
+    font-family: 'Josefin Sans', sans-serif;
+    margin-top: 5.625rem;
+    float: right;
+    margin-right: 60px; }
+    .powell-project .powell-right h2 {
+      color: #fa0000;
+      font-size: 30px; }
+    .powell-project .powell-right p {
+      font-size: 20px; }
+    .powell-project .powell-right a {
+      float: right;
+      padding: 30px;
+      margin-top: -60px; }
+    .powell-project .powell-right button {
+      font-size: 12px;
+      width: 85px;
+      height: 30px;
+      border-radius: 15px;
+      background-color: #fa0000;
+      color: #fff;
+      cursor: pointer; }
+      .powell-project .powell-right button:hover {
+        color: #2e0000;
+        transition: all .2s ease-in; }
+  .powell-project .img-powell-left {
+    padding-left: 100px;
+    padding-top: 80px; }
+
+.swamp-project {
+  height: 500px; }
+  .swamp-project .swamp-left {
+    font-family: 'Josefin Sans', sans-serif;
+    float: left;
+    display: block;
+    margin-right: flex-gutter(12);
+    width: flex-grid(6, 12);
+    margin-top: 8.125rem;
+    margin-right: 60px; }
+    .swamp-project .swamp-left:last-child {
+      margin-right: 0; }
+    .swamp-project .swamp-left h2 {
+      color: #fa0000;
+      font-size: 30px;
+      padding-left: 60px; }
+    .swamp-project .swamp-left p {
+      font-size: 20px;
+      padding-left: 60px; }
+    .swamp-project .swamp-left a {
+      padding-left: 50px; }
+    .swamp-project .swamp-left button {
+      font-size: 12px;
+      width: 85px;
+      height: 30px;
+      border-radius: 15px;
+      background-color: #fa0000;
+      color: #fff;
+      cursor: pointer; }
+      .swamp-project .swamp-left button:hover {
+        color: #2e0000;
+        transition: all .2s ease-in; }
+  .swamp-project .img-swamp-right {
+    float: left;
+    display: block;
+    margin-right: flex-gutter(12);
+    width: flex-grid(6, 12);
+    padding-top: 80px;
+    padding-left: 100px; }
+    .swamp-project .img-swamp-right:last-child {
+      margin-right: 0; }
+
+.sneaker-project {
+  height: 500px;
+  background-color: RGBA(240, 240, 240, 1); }
+  .sneaker-project .sneaker-right {
+    font-family: 'Josefin Sans', sans-serif;
+    margin-top: 5.625rem;
+    float: right;
+    margin-right: 60px; }
+    .sneaker-project .sneaker-right h2 {
+      color: #fa0000;
+      font-size: 30px; }
+    .sneaker-project .sneaker-right p {
+      font-size: 20px; }
+    .sneaker-project .sneaker-right a {
+      float: right;
+      padding: 30px;
+      margin-top: -30px; }
+    .sneaker-project .sneaker-right button {
+      font-size: 12px;
+      width: 85px;
+      height: 30px;
+      border-radius: 15px;
+      background-color: #fa0000;
+      color: #fff;
+      cursor: pointer; }
+      .sneaker-project .sneaker-right button:hover {
+        color: #2e0000;
+        transition: all .2s ease-in; }
+  .sneaker-project .img-sneaker-left {
+    padding-left: 100px;
+    padding-top: 80px; }
+
+.contact-bkg {
+  background: url("../images/abstract-curves.jpg");
+  background-size: cover;
+  height: 100%; }
+
+.contact {
+  max-width: em(1088);
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5rem;
+  text-align: center; }
+  .contact::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .contact h1 {
+    margin: 0 0 25px 0;
+    color: #fff;
+    font-family: 'Biryani', sans-serif;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #fa0000; }
+  .contact .contact-social {
+    display: inline-block;
+    margin: 0 5px; }
+
+.social {
+  margin: 3.75rem 3.75rem 0 3.75rem;
+  color: #fa0000; }
+  .social:hover {
+    color: #fff; }
+
+.up-arrow {
+  width: 100%;
+  height: 90px;
+  margin-top: 30px; }
+  .up-arrow .arrow {
+    float: right;
+    margin-right: 60px;
+    color: #fa0000; }
+    .up-arrow .arrow:hover {
+      color: #fff; }
