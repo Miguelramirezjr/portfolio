@@ -19,16 +19,16 @@ html, body {
     display: table; }
   @media screen and (max-width: 925px) and (min-width: 769px) {
     html, body {
-      padding-left: 10px;
-      padding-right: 10px; } }
+      padding-left: 5px;
+      padding-right: 5px; } }
   @media screen and (max-width: 768px) and (min-width: 481px) {
     html, body {
-      padding-left: 10px;
-      padding-right: 10px; } }
+      padding-left: 5px;
+      padding-right: 5px; } }
   @media screen and (max-width: 480px) {
     html, body {
-      padding-left: 10px;
-      padding-right: 10px; } }
+      padding-left: 5px;
+      padding-right: 5px; } }
 
 h1 {
   font-size: 2.5rem; }
@@ -49,10 +49,24 @@ header {
   background: url("../images/smartphone.jpg");
   background-size: cover;
   height: 100%; }
+  @media screen and (max-width: 768px) and (min-width: 481px) {
+    header {
+      background: url("../images/coffee-pencil1.jpg");
+      background-size: cover;
+      height: 100%;
+      padding-left: 45px; } }
+  @media screen and (max-width: 480px) {
+    header {
+      background: url("../images/typewriter.jpg");
+      background-size: cover;
+      height: 100%; } }
   header .nav {
     width: 100%;
     font-family: 'Josefin Sans', sans-serif;
     color: #fff; }
+    @media screen and (max-width: 480px) {
+      header .nav {
+        margin-left: -30px; } }
     header .nav ul {
       text-align: right;
       margin-top: 0;
@@ -66,9 +80,6 @@ header {
     float: right;
     margin-right: 90px;
     padding-top: 40px; }
-    @media screen and (max-width: 925px) and (min-width: 769px) {
-      header .info-tags {
-        padding-top: 20px; } }
     header .info-tags a {
       margin: 10px;
       color: #fa0000; }
@@ -85,9 +96,6 @@ header {
       clear: both;
       content: "";
       display: table; }
-    @media screen and (max-width: 925px) and (min-width: 769px) {
-      header .main-heading {
-        padding-top: 90px; } }
     header .main-heading h1 {
       margin-top: 1px;
       font-size: 5em;
@@ -95,9 +103,29 @@ header {
       font-family: 'Josefin Sans', sans-serif;
       text-transform: uppercase;
       text-shadow: 1px 1px #fa0000; }
+      @media screen and (max-width: 768px) and (min-width: 481px) {
+        header .main-heading h1 {
+          font-size: 4em;
+          font-family: 'Josefin Sans', sans-serif;
+          text-transform: uppercase;
+          text-shadow: 1px 1px #fa0000; } }
+      @media screen and (max-width: 480px) {
+        header .main-heading h1 {
+          font-size: 2.5em;
+          font-family: 'Josefin Sans', sans-serif;
+          text-transform: uppercase;
+          text-shadow: 1px 1px #fa0000;
+          margin-top: -45px;
+          padding: 0; } }
     header .main-heading h2 {
       font-family: 'Josefin Sans', sans-serif;
       font-size: 2rem; }
+      @media screen and (max-width: 768px) and (min-width: 481px) {
+        header .main-heading h2 {
+          color: #fff; } }
+      @media screen and (max-width: 480px) {
+        header .main-heading h2 {
+          color: #fa0000; } }
 
 .menu {
   padding: 50px 0px;
@@ -115,6 +143,12 @@ header {
   -ms-transition: background-color 0.5s ease-in-out;
   transition: background-color 0.5s ease-in-out;
   font-family: 'Josefin Sans', sans-serif; }
+  @media screen and (max-width: 768px) and (min-width: 481px) {
+    .menu {
+      width: 290px;
+      height: 290px;
+      margin-top: 100px;
+      margin-right: 90px; } }
 
 .menu:hover {
   background: rgba(0, 0, 0, 0.2); }
@@ -179,6 +213,10 @@ header {
     width: flex-grid(10, 12); }
     .about p:last-child {
       margin-right: 0; }
+    @media screen and (max-width: 480px) {
+      .about p {
+        font-size: 20px;
+        font-family: 'Josefin Sans', sans-serif; } }
   .about a {
     color: #fa0000; }
     .about a:hover {
@@ -202,11 +240,23 @@ header {
   box-sizing: border-box;
   padding-left: 5%;
   font-size: 20px; }
+  @media screen and (max-width: 768px) and (min-width: 481px) {
+    .SkillSetContainerLeft {
+      font-size: 19px; } }
+  @media screen and (max-width: 480px) {
+    .SkillSetContainerLeft {
+      font-size: 19px;
+      width: 100%;
+      text-align: center;
+      padding-right: 20px; } }
 
 .SkillSetContainerLeftHeading {
   font-weight: lighter;
   font-size: 2.5rem;
   color: #fa0000; }
+  @media screen and (max-width: 768px) and (min-width: 481px) {
+    .SkillSetContainerLeftHeading {
+      font-size: 2.0rem; } }
 
 .SkillSetContainerRight {
   width: 49%;
@@ -215,6 +265,10 @@ header {
   box-sizing: border-box;
   padding-right: 5%;
   margin-top: 40px; }
+  @media screen and (max-width: 480px) {
+    .SkillSetContainerRight {
+      width: 100%;
+      margin-right: 20px; } }
 
 .SkillSetList {
   list-style: none;
@@ -279,6 +333,15 @@ header {
       .personal-project .personal-left {
         height: 400px;
         width: 250px; } }
+    @media screen and (max-width: 768px) and (min-width: 481px) {
+      .personal-project .personal-left {
+        height: 400px;
+        width: 250px; } }
+    @media screen and (max-width: 480px) {
+      .personal-project .personal-left {
+        width: 100%;
+        text-align: center;
+        padding-right: 45px; } }
     .personal-project .personal-left h2 {
       color: #fa0000;
       font-size: 30px;
@@ -290,9 +353,16 @@ header {
         .personal-project .personal-left p {
           font-size: 18px;
           padding: 0; } }
+      @media screen and (max-width: 768px) and (min-width: 481px) {
+        .personal-project .personal-left p {
+          font-size: 18px;
+          padding: 0; } }
     .personal-project .personal-left a {
       padding-left: 50px; }
       @media screen and (max-width: 925px) and (min-width: 769px) {
+        .personal-project .personal-left a {
+          padding: 0; } }
+      @media screen and (max-width: 768px) and (min-width: 481px) {
         .personal-project .personal-left a {
           padding: 0; } }
     .personal-project .personal-left button {
@@ -318,6 +388,16 @@ header {
       @media screen and (max-width: 925px) and (min-width: 769px) {
         .personal-project .img-personal-right img {
           padding-top: 70px; } }
+      @media screen and (max-width: 768px) and (min-width: 481px) {
+        .personal-project .img-personal-right img {
+          width: 55%;
+          float: right;
+          margin-left: 250px;
+          margin-top: -300px; } }
+      @media screen and (max-width: 480px) {
+        .personal-project .img-personal-right img {
+          width: 75%;
+          margin-top: 20px; } }
 
 .blog-project {
   height: 500px;
@@ -326,6 +406,14 @@ header {
     .blog-project {
       margin-top: 105px;
       height: 550px; } }
+  @media screen and (max-width: 768px) and (min-width: 481px) {
+    .blog-project {
+      height: 550px;
+      margin-top: 105px; } }
+  @media screen and (max-width: 480px) {
+    .blog-project {
+      margin-top: 300px;
+      height: 755px; } }
   .blog-project .blog-right {
     font-family: 'Josefin Sans', sans-serif;
     margin-top: 1.875rem;
@@ -334,15 +422,37 @@ header {
     @media screen and (max-width: 925px) and (min-width: 769px) {
       .blog-project .blog-right {
         width: 250px; } }
+    @media screen and (max-width: 768px) and (min-width: 481px) {
+      .blog-project .blog-right {
+        width: 250px; } }
     .blog-project .blog-right h2 {
       color: #fa0000;
       font-size: 30px; }
+      @media screen and (max-width: 768px) and (min-width: 481px) {
+        .blog-project .blog-right h2 {
+          padding: 0;
+          margin-left: 25px; } }
+      @media screen and (max-width: 480px) {
+        .blog-project .blog-right h2 {
+          text-align: center;
+          padding-left: 40px; } }
     .blog-project .blog-right p {
       font-size: 20px; }
       @media screen and (max-width: 925px) and (min-width: 769px) {
         .blog-project .blog-right p {
           font-size: 18px;
           padding: 0; } }
+      @media screen and (max-width: 768px) and (min-width: 481px) {
+        .blog-project .blog-right p {
+          font-size: 18px;
+          padding: 0;
+          margin-left: 30px; } }
+      @media screen and (max-width: 480px) {
+        .blog-project .blog-right p {
+          font-size: 20px;
+          text-align: center;
+          padding-left: 45px;
+          padding-bottom: 30px; } }
     .blog-project .blog-right a {
       float: right;
       padding: 30px;
@@ -351,6 +461,14 @@ header {
         .blog-project .blog-right a {
           padding: 0;
           margin: 2px; } }
+      @media screen and (max-width: 768px) and (min-width: 481px) {
+        .blog-project .blog-right a {
+          padding: 0;
+          margin: 2px; } }
+      @media screen and (max-width: 480px) {
+        .blog-project .blog-right a {
+          margin-left: -25px;
+          margin-right: 30px; } }
     .blog-project .blog-right button {
       font-size: 12px;
       width: 85px;
@@ -372,6 +490,16 @@ header {
     @media screen and (max-width: 925px) and (min-width: 769px) {
       .blog-project .img-blog-left {
         margin-left: -70px; } }
+    @media screen and (max-width: 768px) and (min-width: 481px) {
+      .blog-project .img-blog-left {
+        width: 65%;
+        float: left;
+        margin-left: -90px;
+        margin-top: 30px; } }
+    @media screen and (max-width: 480px) {
+      .blog-project .img-blog-left {
+        width: 100%;
+        margin-left: -50px; } }
 
 .surf-project {
   height: 500px; }
@@ -379,6 +507,9 @@ header {
     .surf-project {
       height: 550px;
       margin-top: 25px; } }
+  @media screen and (max-width: 480px) {
+    .surf-project {
+      height: 770px; } }
   .surf-project .surf-left {
     font-family: 'Josefin Sans', sans-serif;
     float: left;
@@ -393,6 +524,16 @@ header {
       .surf-project .surf-left {
         margin-top: -1px;
         width: 250px; } }
+    @media screen and (max-width: 768px) and (min-width: 481px) {
+      .surf-project .surf-left {
+        margin-top: 3.125rem;
+        margin-right: 150px; } }
+    @media screen and (max-width: 480px) {
+      .surf-project .surf-left {
+        width: 100%;
+        text-align: center;
+        padding-right: 60px;
+        margin-top: 40px; } }
     .surf-project .surf-left h2 {
       color: #fa0000;
       font-size: 30px;
@@ -404,11 +545,22 @@ header {
         .surf-project .surf-left p {
           font-size: 18px;
           padding: 0; } }
+      @media screen and (max-width: 768px) and (min-width: 481px) {
+        .surf-project .surf-left p {
+          font-size: 18px;
+          padding: 0;
+          margin-right: 250px; } }
     .surf-project .surf-left a {
       padding-left: 50px; }
       @media screen and (max-width: 925px) and (min-width: 769px) {
         .surf-project .surf-left a {
           padding: 0; } }
+      @media screen and (max-width: 768px) and (min-width: 481px) {
+        .surf-project .surf-left a {
+          padding: 0; } }
+      @media screen and (max-width: 480px) {
+        .surf-project .surf-left a {
+          margin-top: -30px; } }
     .surf-project .surf-left button {
       font-size: 12px;
       width: 85px;
@@ -432,6 +584,16 @@ header {
     @media screen and (max-width: 925px) and (min-width: 769px) {
       .surf-project .img-surf-right {
         float: right; } }
+    @media screen and (max-width: 768px) and (min-width: 481px) {
+      .surf-project .img-surf-right {
+        width: 65%;
+        float: right;
+        margin-top: -400px; } }
+    @media screen and (max-width: 480px) {
+      .surf-project .img-surf-right {
+        margin-top: -35px;
+        margin-left: -45px;
+        width: 100%; } }
 
 .powell-project {
   height: 500px;
@@ -439,6 +601,12 @@ header {
   @media screen and (max-width: 925px) and (min-width: 769px) {
     .powell-project {
       height: 550px; } }
+  @media screen and (max-width: 768px) and (min-width: 481px) {
+    .powell-project {
+      height: 550px; } }
+  @media screen and (max-width: 480px) {
+    .powell-project {
+      height: 768px; } }
   .powell-project .powell-right {
     font-family: 'Josefin Sans', sans-serif;
     margin-top: 5.625rem;
@@ -449,14 +617,37 @@ header {
         width: 250px;
         margin-top: 40px;
         margin-right: 50px; } }
+    @media screen and (max-width: 768px) and (min-width: 481px) {
+      .powell-project .powell-right {
+        width: 250px; } }
     .powell-project .powell-right h2 {
       color: #fa0000;
       font-size: 30px; }
+      @media screen and (max-width: 768px) and (min-width: 481px) {
+        .powell-project .powell-right h2 {
+          margin-left: 25px;
+          margin-top: -20px; } }
+      @media screen and (max-width: 480px) {
+        .powell-project .powell-right h2 {
+          text-align: center;
+          padding-left: 40px;
+          margin-top: -30px; } }
     .powell-project .powell-right p {
       font-size: 20px; }
       @media screen and (max-width: 925px) and (min-width: 769px) {
         .powell-project .powell-right p {
           font-size: 18px; } }
+      @media screen and (max-width: 768px) and (min-width: 481px) {
+        .powell-project .powell-right p {
+          font-size: 18px;
+          padding: 0;
+          margin-left: 30px; } }
+      @media screen and (max-width: 480px) {
+        .powell-project .powell-right p {
+          font-size: 20px;
+          text-align: center;
+          padding-left: 45px;
+          padding-bottom: 30px; } }
     .powell-project .powell-right a {
       float: right;
       padding: 30px;
@@ -465,6 +656,14 @@ header {
         .powell-project .powell-right a {
           padding: 0;
           margin: 2px; } }
+      @media screen and (max-width: 768px) and (min-width: 481px) {
+        .powell-project .powell-right a {
+          padding: 0;
+          margin: 2px; } }
+      @media screen and (max-width: 480px) {
+        .powell-project .powell-right a {
+          margin-left: -25px;
+          margin-right: 30px; } }
     .powell-project .powell-right button {
       font-size: 12px;
       width: 85px;
@@ -482,9 +681,22 @@ header {
     @media screen and (max-width: 925px) and (min-width: 769px) {
       .powell-project .img-powell-left {
         margin-left: -70px; } }
+    @media screen and (max-width: 768px) and (min-width: 481px) {
+      .powell-project .img-powell-left {
+        width: 65%;
+        float: left;
+        margin-left: -90px;
+        margin-top: 30px; } }
+    @media screen and (max-width: 480px) {
+      .powell-project .img-powell-left {
+        width: 100%;
+        margin-left: -50px; } }
 
 .swamp-project {
   height: 500px; }
+  @media screen and (max-width: 480px) {
+    .swamp-project {
+      height: 742px; } }
   .swamp-project .swamp-left {
     font-family: 'Josefin Sans', sans-serif;
     float: left;
@@ -499,10 +711,23 @@ header {
       .swamp-project .swamp-left {
         margin-top: 25px;
         width: 250px; } }
+    @media screen and (max-width: 768px) and (min-width: 481px) {
+      .swamp-project .swamp-left {
+        margin-top: 3.125rem;
+        margin-right: 150px; } }
+    @media screen and (max-width: 480px) {
+      .swamp-project .swamp-left {
+        width: 100%;
+        text-align: center;
+        padding-right: 60px;
+        margin-top: 40px; } }
     .swamp-project .swamp-left h2 {
       color: #fa0000;
       font-size: 30px;
       padding-left: 60px; }
+      @media screen and (max-width: 768px) and (min-width: 481px) {
+        .swamp-project .swamp-left h2 {
+          margin-left: -35px; } }
     .swamp-project .swamp-left p {
       font-size: 20px;
       padding-left: 60px; }
@@ -510,9 +735,17 @@ header {
         .swamp-project .swamp-left p {
           font-size: 18px;
           padding: 0; } }
+      @media screen and (max-width: 768px) and (min-width: 481px) {
+        .swamp-project .swamp-left p {
+          font-size: 18px;
+          padding: 0;
+          margin-right: 250px; } }
     .swamp-project .swamp-left a {
       padding-left: 50px; }
       @media screen and (max-width: 925px) and (min-width: 769px) {
+        .swamp-project .swamp-left a {
+          padding: 0; } }
+      @media screen and (max-width: 768px) and (min-width: 481px) {
         .swamp-project .swamp-left a {
           padding: 0; } }
     .swamp-project .swamp-left button {
@@ -538,6 +771,16 @@ header {
     @media screen and (max-width: 925px) and (min-width: 769px) {
       .swamp-project .img-swamp-right {
         float: right; } }
+    @media screen and (max-width: 768px) and (min-width: 481px) {
+      .swamp-project .img-swamp-right {
+        width: 65%;
+        float: right;
+        margin-top: -400px; } }
+    @media screen and (max-width: 480px) {
+      .swamp-project .img-swamp-right {
+        margin-top: -35px;
+        margin-left: -45px;
+        width: 100%; } }
 
 .sneaker-project {
   height: 500px;
@@ -545,6 +788,12 @@ header {
   @media screen and (max-width: 925px) and (min-width: 769px) {
     .sneaker-project {
       height: 635px; } }
+  @media screen and (max-width: 768px) and (min-width: 481px) {
+    .sneaker-project {
+      height: 695px; } }
+  @media screen and (max-width: 480px) {
+    .sneaker-project {
+      height: 885px; } }
   .sneaker-project .sneaker-right {
     font-family: 'Josefin Sans', sans-serif;
     margin-top: 5.625rem;
@@ -555,14 +804,37 @@ header {
         width: 250px;
         margin-top: 40px;
         margin-right: 50px; } }
+    @media screen and (max-width: 768px) and (min-width: 481px) {
+      .sneaker-project .sneaker-right {
+        width: 250px;
+        margin-top: 21px; } }
     .sneaker-project .sneaker-right h2 {
       color: #fa0000;
       font-size: 30px; }
+      @media screen and (max-width: 768px) and (min-width: 481px) {
+        .sneaker-project .sneaker-right h2 {
+          margin-left: 35px; } }
+      @media screen and (max-width: 480px) {
+        .sneaker-project .sneaker-right h2 {
+          text-align: center;
+          padding-left: 40px;
+          margin-top: -30px; } }
     .sneaker-project .sneaker-right p {
       font-size: 20px; }
       @media screen and (max-width: 925px) and (min-width: 769px) {
         .sneaker-project .sneaker-right p {
           font-size: 18px; } }
+      @media screen and (max-width: 768px) and (min-width: 481px) {
+        .sneaker-project .sneaker-right p {
+          font-size: 18px;
+          padding: 0;
+          margin-left: 30px; } }
+      @media screen and (max-width: 480px) {
+        .sneaker-project .sneaker-right p {
+          font-size: 20px;
+          text-align: center;
+          padding-left: 45px;
+          padding-bottom: 30px; } }
     .sneaker-project .sneaker-right a {
       float: right;
       padding: 30px;
@@ -571,6 +843,14 @@ header {
         .sneaker-project .sneaker-right a {
           padding: 0;
           margin: 2px; } }
+      @media screen and (max-width: 768px) and (min-width: 481px) {
+        .sneaker-project .sneaker-right a {
+          padding: 0;
+          margin: 2px; } }
+      @media screen and (max-width: 480px) {
+        .sneaker-project .sneaker-right a {
+          margin-left: -25px;
+          margin-right: 30px; } }
     .sneaker-project .sneaker-right button {
       font-size: 12px;
       width: 85px;
@@ -588,11 +868,31 @@ header {
     @media screen and (max-width: 925px) and (min-width: 769px) {
       .sneaker-project .img-sneaker-left {
         margin-left: -70px; } }
+    @media screen and (max-width: 768px) and (min-width: 481px) {
+      .sneaker-project .img-sneaker-left {
+        width: 65%;
+        float: left;
+        margin-left: -90px;
+        margin-top: 30px; } }
+    @media screen and (max-width: 480px) {
+      .sneaker-project .img-sneaker-left {
+        width: 100%;
+        margin-left: -50px; } }
 
 .contact-bkg {
   background: url("../images/spiral1.jpg");
   background-size: cover;
   height: 100%; }
+  @media screen and (max-width: 768px) and (min-width: 481px) {
+    .contact-bkg {
+      background: url("../images/glasses.jpg");
+      background-size: cover;
+      height: 100%; } }
+  @media screen and (max-width: 480px) {
+    .contact-bkg {
+      background: url("../images/black-and-white-lights-abstract.jpg");
+      background-size: cover;
+      height: 100%; } }
 
 .contact {
   max-width: em(1088);
@@ -610,9 +910,20 @@ header {
     font-family: 'Biryani', sans-serif;
     text-transform: uppercase;
     text-shadow: 2px 2px #fa0000; }
+    @media screen and (max-width: 768px) and (min-width: 481px) {
+      .contact h1 {
+        color: #fa0000;
+        font-family: 'Biryani', sans-serif;
+        text-transform: uppercase;
+        text-shadow: 2px 2px #fff;
+        margin-top: -40px; } }
   .contact .contact-social {
     display: inline-block;
     margin: 0 5px; }
+    @media screen and (max-width: 768px) and (min-width: 481px) {
+      .contact .contact-social {
+        margin: -40px;
+        margin-bottom: 200px; } }
 
 .social {
   margin: 3.75rem 3.75rem 0 3.75rem;
@@ -630,11 +941,37 @@ header {
     padding-top: 50px;
     padding-left: 15px;
     font-family: 'Josefin Sans', sans-serif; }
+    @media screen and (max-width: 768px) and (min-width: 481px) {
+      .up-arrow .footertext {
+        color: #fff;
+        padding-top: 45px;
+        padding-left: 15px;
+        font-family: 'Josefin Sans', sans-serif; } }
+    @media screen and (max-width: 480px) {
+      .up-arrow .footertext {
+        color: #fff;
+        font-size: 13px;
+        font-family: 'Josefin Sans', sans-serif;
+        padding-top: 30px; } }
   .up-arrow h4 {
     color: #fa0000;
     float: right;
-    margin-right: 60px;
+    margin-right: 30px;
     font-family: 'Josefin Sans', sans-serif; }
+    @media screen and (max-width: 768px) and (min-width: 481px) {
+      .up-arrow h4 {
+        color: #fff;
+        float: right;
+        margin-right: 30px;
+        margin-top: 40px;
+        font-family: 'Josefin Sans', sans-serif; } }
+    @media screen and (max-width: 480px) {
+      .up-arrow h4 {
+        color: #fff;
+        float: right;
+        margin-right: 30px;
+        margin-top: 40px;
+        font-family: 'Josefin Sans', sans-serif; } }
   .up-arrow .arrow {
     float: right;
     margin-right: 20px;

@@ -23,18 +23,18 @@ html, body {
     padding: 0;
 
     @include media($large-tablet) {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 
     @include media($mobile) {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 
     @include media($small-mobile) {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 }
 
@@ -62,10 +62,27 @@ header {
     background-size: cover;
     height: 100%;
 
+    @include media($mobile) {
+        background:  url('../images/coffee-pencil1.jpg');
+        background-size: cover;
+        height: 100%;
+        padding-left: 45px;
+    }
+
+    @include media($small-mobile) {
+        background:  url('../images/typewriter.jpg');
+        background-size: cover;
+        height: 100%;
+    }
+
     .nav {
         @include fill-parent;
         font-family: 'Josefin Sans', sans-serif;
         color: $third-color;
+
+        @include media($small-mobile) {
+            margin-left: -30px;
+        }
 
         ul {
             text-align: right;
@@ -86,10 +103,6 @@ header {
         margin-right: 90px;
         padding-top: 40px;
 
-        @include media($large-tablet) {
-            padding-top: 20px;
-        }
-
         a {
             margin: 10px;
             color: $first-color;
@@ -106,10 +119,6 @@ header {
     text-align: center;
     padding-top: rem(160px);
 
-        @include media($large-tablet) {
-            padding-top: 90px;
-        }
-
         h1 {
             margin-top: 1px;
             font-size: 5em;
@@ -118,12 +127,35 @@ header {
             text-transform: uppercase;
             text-shadow: 1px 1px $first-color;
 
+            @include media($mobile) {
+                font-size: 4em;
+                font-family: 'Josefin Sans', sans-serif;
+                text-transform: uppercase;
+                text-shadow: 1px 1px $first-color;
+            }
+
+            @include media($small-mobile) {
+                font-size: 2.5em;
+                font-family: 'Josefin Sans', sans-serif;
+                text-transform: uppercase;
+                text-shadow: 1px 1px $first-color;
+                margin-top: -45px;
+                padding: 0;
+            }
+
         }
 
         h2 {
             font-family: 'Josefin Sans', sans-serif;
             font-size: 2rem;
 
+            @include media($mobile) {
+                color: $third-color;
+            }
+
+            @include media($small-mobile) {
+                color: $first-color;
+            }
         }
     }
 }
@@ -144,6 +176,13 @@ header {
     -ms-transition: background-color 0.5s ease-in-out;
     transition: background-color 0.5s ease-in-out;
     font-family: 'Josefin Sans', sans-serif;
+
+    @include media($mobile) {
+        width: 290px;
+        height: 290px;
+        margin-top: 100px;
+        margin-right: 90px;
+    }
 }
 
 .menu:hover {
@@ -208,6 +247,11 @@ header {
         font-size: 22px;
         font-family: 'Josefin Sans', sans-serif;
         @include span-columns(10);
+
+        @include media($small-mobile) {
+            font-size: 20px;
+            font-family: 'Josefin Sans', sans-serif;
+        }
     }
 
     a {
@@ -236,12 +280,27 @@ header {
     box-sizing: border-box;
     padding-left: 5%;
     font-size: 20px;
+
+    @include media($mobile) {
+        font-size: 19px;
+    }
+
+    @include media($small-mobile) {
+        font-size: 19px;
+        width: 100%;
+        text-align: center;
+        padding-right: 20px;
+    }
 }
 
 .SkillSetContainerLeftHeading {
     font-weight: lighter;
     font-size: 2.5rem;
     color: $first-color;
+
+    @include media($mobile) {
+        font-size: 2.0rem;
+    }
 }
 
 .SkillSetContainerRight {
@@ -251,6 +310,11 @@ header {
     box-sizing: border-box;
     padding-right: 5%;
     margin-top: 40px;
+
+    @include media($small-mobile) {
+        width: 100%;
+        margin-right: 20px;
+    }
 }
 
 .SkillSetList {
@@ -326,6 +390,17 @@ header {
             width: 250px;
         }
 
+        @include media($mobile) {
+            height: 400px;
+            width: 250px;
+        }
+
+        @include media($small-mobile) {
+            width: 100%;
+            text-align: center;
+            padding-right: 45px;
+        }
+
         h2 {
             color: $first-color;
             font-size: 30px;
@@ -340,12 +415,21 @@ header {
                 font-size: 18px;
                 padding: 0;
             }
+
+            @include media($mobile) {
+                font-size: 18px;
+                padding: 0;
+            }
         }
 
         a {
             padding-left: 50px;
 
             @include media($large-tablet) {
+                padding: 0;
+            }
+
+            @include media($mobile) {
                 padding: 0;
             }
         }
@@ -375,6 +459,18 @@ header {
             @include media($large-tablet) {
                 padding-top: 70px;
             }
+
+            @include media($mobile) {
+                width: 55%;
+                float: right;
+                margin-left: 250px;
+                margin-top: -300px;
+            }
+
+            @include media($small-mobile) {
+                width: 75%;
+                margin-top: 20px;
+            }
         }
     }
 }
@@ -388,6 +484,16 @@ header {
         height: 550px;
     }
 
+    @include media($mobile) {
+        height: 550px;
+        margin-top: 105px;
+    }
+
+    @include media($small-mobile) {
+        margin-top: 300px;
+        height: 755px;
+    }
+
     .blog-right {
         font-family: 'Josefin Sans', sans-serif;
         margin-top: rem(30px);
@@ -398,9 +504,23 @@ header {
             width: 250px;
         }
 
+        @include media($mobile) {
+            width: 250px;
+        }
+
         h2 {
             color: $first-color;
             font-size: 30px;
+
+            @include media($mobile) {
+                padding: 0;
+                margin-left: 25px;
+            }
+
+            @include media($small-mobile) {
+                text-align: center;
+                padding-left: 40px;
+            }
         }
 
         p {
@@ -409,6 +529,19 @@ header {
             @include media($large-tablet) {
                 font-size: 18px;
                 padding: 0;
+            }
+
+            @include media($mobile) {
+                font-size: 18px;
+                padding: 0;
+                margin-left: 30px;
+            }
+
+            @include media($small-mobile) {
+                font-size: 20px;
+                text-align: center;
+                padding-left: 45px;
+                padding-bottom: 30px;
             }
         }
 
@@ -420,6 +553,17 @@ header {
             @include media($large-tablet) {
                 padding: 0;
                 margin: 2px;
+            }
+
+            @include media($mobile) {
+                padding: 0;
+                margin: 2px;
+            }
+
+            @include media($small-mobile) {
+                margin-left: -25px;
+                margin-right: 30px;
+
             }
         }
 
@@ -451,6 +595,18 @@ header {
         @include media($large-tablet) {
             margin-left: -70px;
         }
+
+        @include media($mobile) {
+            width: 65%;
+            float: left;
+            margin-left: -90px;
+            margin-top: 30px;
+        }
+
+        @include media($small-mobile) {
+            width: 100%;
+            margin-left: -50px;
+        }
     }
 
 }
@@ -463,6 +619,10 @@ header {
         margin-top: 25px;
     }
 
+    @include media($small-mobile) {
+        height: 770px;
+    }
+
     .surf-left {
         font-family: 'Josefin Sans', sans-serif;
         @include span-columns(6);
@@ -472,6 +632,18 @@ header {
         @include media($large-tablet) {
             margin-top: -1px;
             width: 250px;
+        }
+
+        @include media($mobile) {
+            margin-top: rem(50px);
+            margin-right: 150px;
+        }
+
+        @include media($small-mobile) {
+            width: 100%;
+            text-align: center;
+            padding-right: 60px;
+            margin-top: 40px;
         }
 
         h2 {
@@ -488,6 +660,12 @@ header {
                 font-size: 18px;
                 padding: 0;
             }
+
+            @include media($mobile) {
+                font-size: 18px;
+                padding: 0;
+                margin-right: 250px;
+            }
         }
 
         a {
@@ -495,6 +673,14 @@ header {
 
             @include media($large-tablet) {
                 padding: 0;
+            }
+
+            @include media($mobile) {
+                padding: 0;
+            }
+
+            @include media($small-mobile) {
+                margin-top: -30px;
             }
         }
 
@@ -522,6 +708,18 @@ header {
         @include media($large-tablet) {
             float: right;
         }
+
+        @include media($mobile) {
+            width: 65%;
+            float: right;
+            margin-top: -400px;
+        }
+
+        @include media($small-mobile) {
+            margin-top: -35px;
+            margin-left: -45px;
+            width: 100%;
+        }
     }
 }
 
@@ -531,6 +729,15 @@ header {
 
     @include media($large-tablet) {
         height: 550px;
+    }
+
+    @include media($mobile) {
+        height: 550px;
+    }
+
+    @include media($small-mobile) {
+        height: 768px;
+
     }
 
     .powell-right {
@@ -545,9 +752,24 @@ header {
             margin-right: 50px;
         }
 
+        @include media($mobile) {
+            width: 250px;
+        }
+
         h2 {
             color: $first-color;
             font-size: 30px;
+
+            @include media($mobile) {
+                margin-left: 25px;
+                margin-top: -20px;
+            }
+
+            @include media($small-mobile) {
+                text-align: center;
+                padding-left: 40px;
+                margin-top: -30px;
+            }
         }
 
         p {
@@ -555,6 +777,19 @@ header {
 
             @include media($large-tablet) {
                 font-size: 18px;
+            }
+
+            @include media($mobile) {
+                font-size: 18px;
+                padding: 0;
+                margin-left: 30px;
+            }
+
+            @include media($small-mobile) {
+                font-size: 20px;
+                text-align: center;
+                padding-left: 45px;
+                padding-bottom: 30px;
             }
         }
 
@@ -566,6 +801,17 @@ header {
             @include media($large-tablet) {
                 padding: 0;
                 margin: 2px;
+            }
+
+            @include media($mobile) {
+                padding: 0;
+                margin: 2px;
+            }
+
+            @include media($small-mobile) {
+                margin-left: -25px;
+                margin-right: 30px;
+
             }
         }
 
@@ -592,6 +838,18 @@ header {
         @include media($large-tablet) {
             margin-left: -70px;
         }
+
+        @include media($mobile) {
+            width: 65%;
+            float: left;
+            margin-left: -90px;
+            margin-top: 30px;
+        }
+
+        @include media($small-mobile) {
+            width: 100%;
+            margin-left: -50px;
+        }
     }
 
 }
@@ -599,7 +857,8 @@ header {
 .swamp-project {
     height: 500px;
 
-    @include media($large-tablet) {
+    @include media($small-mobile) {
+        height: 742px;
 
     }
 
@@ -614,10 +873,26 @@ header {
             width: 250px;
         }
 
+        @include media($mobile) {
+            margin-top: rem(50px);
+            margin-right: 150px;
+        }
+
+        @include media($small-mobile) {
+            width: 100%;
+            text-align: center;
+            padding-right: 60px;
+            margin-top: 40px;
+        }
+
         h2 {
             color: $first-color;
             font-size: 30px;
             padding-left: 60px;
+
+            @include media($mobile) {
+                margin-left: -35px;
+            }
         }
 
         p {
@@ -628,12 +903,22 @@ header {
                 font-size: 18px;
                 padding: 0;
             }
+
+            @include media($mobile) {
+                font-size: 18px;
+                padding: 0;
+                margin-right: 250px;
+            }
         }
 
         a {
             padding-left: 50px;
 
             @include media($large-tablet) {
+                padding: 0;
+            }
+
+            @include media($mobile) {
                 padding: 0;
             }
         }
@@ -662,6 +947,18 @@ header {
         @include media($large-tablet) {
             float: right;
         }
+
+        @include media($mobile) {
+            width: 65%;
+            float: right;
+            margin-top: -400px;
+        }
+
+        @include media($small-mobile) {
+            margin-top: -35px;
+            margin-left: -45px;
+            width: 100%;
+        }
     }
 }
 
@@ -671,6 +968,15 @@ header {
 
     @include media($large-tablet) {
         height: 635px;
+    }
+
+    @include media($mobile) {
+        height: 695px;
+    }
+
+    @include media($small-mobile) {
+        height: 885px;
+
     }
 
     .sneaker-right {
@@ -685,9 +991,24 @@ header {
             margin-right: 50px;
         }
 
+        @include media($mobile) {
+            width: 250px;
+            margin-top: 21px;
+        }
+
         h2 {
             color: $first-color;
             font-size: 30px;
+
+            @include media($mobile) {
+                margin-left: 35px;
+            }
+
+            @include media($small-mobile) {
+                text-align: center;
+                padding-left: 40px;
+                margin-top: -30px;
+            }
         }
 
         p {
@@ -695,6 +1016,19 @@ header {
 
             @include media($large-tablet) {
                 font-size: 18px;
+            }
+
+            @include media($mobile) {
+                font-size: 18px;
+                padding: 0;
+                margin-left: 30px;
+            }
+
+            @include media($small-mobile) {
+                font-size: 20px;
+                text-align: center;
+                padding-left: 45px;
+                padding-bottom: 30px;
             }
         }
 
@@ -706,6 +1040,17 @@ header {
             @include media($large-tablet) {
                 padding: 0;
                 margin: 2px;
+            }
+
+            @include media($mobile) {
+                padding: 0;
+                margin: 2px;
+            }
+
+            @include media($small-mobile) {
+                margin-left: -25px;
+                margin-right: 30px;
+
             }
         }
 
@@ -732,6 +1077,18 @@ header {
         @include media($large-tablet) {
             margin-left: -70px;
         }
+
+        @include media($mobile) {
+            width: 65%;
+            float: left;
+            margin-left: -90px;
+            margin-top: 30px;
+        }
+
+        @include media($small-mobile) {
+            width: 100%;
+            margin-left: -50px;
+        }
     }
 
 }
@@ -740,6 +1097,18 @@ header {
     background:  url('../images/spiral1.jpg');
     background-size: cover;
     height: 100%;
+
+    @include media($mobile) {
+        background:  url('../images/glasses.jpg');
+        background-size: cover;
+        height: 100%;
+    }
+
+    @include media($small-mobile) {
+        background:  url('../images/black-and-white-lights-abstract.jpg');
+        background-size: cover;
+        height: 100%;
+    }
 }
 
 .contact {
@@ -753,11 +1122,24 @@ header {
         font-family: 'Biryani', sans-serif;
         text-transform: uppercase;
         text-shadow: 2px 2px $first-color;
+
+        @include media($mobile) {
+            color: $first-color;
+            font-family: 'Biryani', sans-serif;
+            text-transform: uppercase;
+            text-shadow: 2px 2px $third-color;
+            margin-top: -40px;
+        }
     }
 
     .contact-social {
         display: inline-block;
         margin: 0 5px;
+
+        @include media($mobile) {
+            margin: -40px;
+            margin-bottom: 200px;
+        }
     }
 }
 
@@ -781,13 +1163,43 @@ header {
         padding-top: 50px;
         padding-left: 15px;
         font-family: 'Josefin Sans', sans-serif;
+
+        @include media($mobile) {
+            color: $third-color;
+            padding-top: 45px;
+            padding-left: 15px;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        @include media($small-mobile) {
+            color: $third-color;
+            font-size: 13px;
+            font-family: 'Josefin Sans', sans-serif;
+            padding-top: 30px;
+        }
     }
 
     h4 {
         color: $first-color;
         float: right;
-        margin-right: 60px;
+        margin-right: 30px;
         font-family: 'Josefin Sans', sans-serif;
+
+        @include media($mobile) {
+            color: $third-color;
+            float: right;
+            margin-right: 30px;
+            margin-top: 40px;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        @include media($small-mobile) {
+            color: $third-color;
+            float: right;
+            margin-right: 30px;
+            margin-top: 40px;
+            font-family: 'Josefin Sans', sans-serif;
+        }
     }
 
     .arrow {
