@@ -3,7 +3,7 @@ $(document).ready(function(){
     $('.abt').click(function() {
         $('html, body').animate({
             scrollTop: $('.about').offset().top -20
-        }, 2000);
+        }, 1000);
     });
 
     $('.wrk').click(function() {
@@ -14,14 +14,14 @@ $(document).ready(function(){
 
     $('.ctc').click(function() {
         $('html, body').animate({
-            scrollTop: $('.contact').offset().top -80
+            scrollTop: $('.contact').offset().top -190
         }, 3000);
     });
 
     $('.arrow').click(function() {
         $('html, body').animate({
             scrollTop: $('header').offset().top -80
-        }, 3000);
+        }, 2000);
     });
 
 });
