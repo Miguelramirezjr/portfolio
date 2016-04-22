@@ -9,7 +9,7 @@ $fifth-color: rgba(0,0,0,0.7);
 $sixth-color: rgba(0,0,0,0.2);
 $seventh-color: #000000;
 
-$desktop: new-breakpoint(max-width 1500px min-width 1025px 9);
+$desktop: new-breakpoint(max-width 1600px min-width 1025px 9);
 $large-tablet: new-breakpoint(max-width 1024px min-width 737px 9);
 $mobile: new-breakpoint(max-width 736px min-width 414px 4);
 
