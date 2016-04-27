@@ -9,7 +9,7 @@ $fifth-color: rgba(0,0,0,0.7);
 $sixth-color: rgba(0,0,0,0.2);
 $seventh-color: #000000;
 
-$desktop: new-breakpoint(max-width 1600px min-width 1025px 9);
+$desktop: new-breakpoint(min-width 1025px 9);
 $large-tablet: new-breakpoint(max-width 1024px min-width 737px 9);
 $mobile: new-breakpoint(max-width 736px min-width 414px 4);
 
@@ -58,10 +58,12 @@ a {
 header {
     @include fill-parent;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
 
     @include media($mobile) {
         background:  url('../images/sphere-2.jpg');
+        background-size: cover;
+        background-position: center;
         height: 740px;
     }
     // image provided by http://www.freepik.com/free-vector/minimal-gray-halftone-frame_843312.htm Designed by Freepik
@@ -69,12 +71,15 @@ header {
     @include media($large-tablet) {
         background:  url('../images/black-bg.jpg');
         height: 600px;
+        background-size: cover;
+        background-position: center;
     }
 
     @include media($desktop) {
         background:  url('../images/smartphone.jpg');
         height: 750px;
-        background-size: 100% 100%;
+        background-size: cover;
+        background-position: center;
     }
 
     .nav {
@@ -1229,22 +1234,22 @@ header {
 
     @include media($mobile) {
         background:  url('../images/black-footer.jpg');
-        background-size: 100% 100%;
-        height: auto;
+        background-size: cover;
+        background-position: center;
     }
     // pic provided by http://www.freepik.com/free-vector/grungy-dark-background_827026.htm Designed by Freepik
 
     @include media($large-tablet) {
         background:  url('../images/black-foot-1.jpg');
-        background-size: 100% 100%;
-        height: auto;
+        background-size: cover;
+        background-position: center;
     }
     // pic provided by http://www.freepik.com/free-vector/dark-abstract-background_841881.htm Designed by Freepik
 
     @include media($desktop) {
         background:  url('../images/spiral1.jpg');
-        background-size: 100% 100%;
-        height: auto;
+        background-size: cover;
+        background-position: center;
     }
 }
 
